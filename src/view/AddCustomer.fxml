@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomer">
+   <children>
+      <Label layoutX="47.0" layoutY="30.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="100.0" text="Customer ID" />
+      <Label layoutX="70.0" layoutY="140.0" text="Customer Name" />
+      <Label layoutX="70.0" layoutY="180.0" text="Address" />
+      <Label layoutX="70.0" layoutY="220.0" text="Postal Code" />
+      <Label layoutX="70.0" layoutY="260.0" text="Phone Number" />
+      <Label layoutX="70.0" layoutY="300.0" text="Countries" />
+      <Label layoutX="70.0" layoutY="340.0" text="Division" />
+      <TextField fx:id="addCustomerID" disable="true" editable="false" layoutX="210.0" layoutY="95.0" text="Auto Gen - Disabled" />
+      <TextField fx:id="addCustomerName" layoutX="210.0" layoutY="135.0" />
+      <TextField fx:id="addCustomerAddress" layoutX="210.0" layoutY="175.0" />
+      <TextField fx:id="addCustomerPostal" layoutX="210.0" layoutY="215.0" />
+      <TextField fx:id="addCustomerPhone" layoutX="210.0" layoutY="255.0" />
+      <ComboBox fx:id="addCustomerCountry" layoutX="210.0" layoutY="295.0" prefWidth="150.0" />
+      <ComboBox fx:id="addCustomerDivision" layoutX="210.0" layoutY="335.0" prefWidth="150.0" />
+      <Button fx:id="addCustomerSave" layoutX="235.0" layoutY="413.0" mnemonicParsing="false" onAction="#addCustomerSaveAction" text="Save" />
+      <Button fx:id="addCustomerCancel" layoutX="318.0" layoutY="414.0" mnemonicParsing="false" onAction="#addCustomerCancelAction" text="Cancel" />
+   </children>
+</AnchorPane>

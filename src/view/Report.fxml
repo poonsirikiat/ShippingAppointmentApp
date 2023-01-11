@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportForm">
+    <Rectangle arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="227.0" layoutX="15.0" layoutY="267.0" stroke="BLACK" strokeType="INSIDE" width="730.0" />
+    <TableView fx:id="reportTable" layoutX="25.0" layoutY="323.0" prefHeight="134.0" prefWidth="710.0">
+        <columns>
+            <TableColumn fx:id="appIDCol" prefWidth="70.0" text="Appt ID" />
+            <TableColumn fx:id="appTypeCol" prefWidth="70.0" text="Type" />
+            <TableColumn fx:id="appContactIDCol" prefWidth="70.0" text="Contact" />
+            <TableColumn fx:id="appTitleCol" prefWidth="80.0" text="Title" />
+            <TableColumn fx:id="appDescriptionCol" prefWidth="100.0" text="Description" />
+            <TableColumn fx:id="appStartCol" prefWidth="120.0" text="Start Date/Time" />
+            <TableColumn fx:id="appEndCol" prefWidth="120.0" text="End Date/Time" />
+            <TableColumn fx:id="appCustomerIDCol" prefWidth="80.0" text="Customer ID" />
+
+        </columns>
+    </TableView>
+   <Label layoutX="25.0" layoutY="22.0" text="Report">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="205.0" layoutX="16.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="562.0" />
+   <ComboBox fx:id="filterContact" layoutX="401.0" layoutY="293.0" prefWidth="150.0" />
+   <Label layoutX="401.0" layoutY="270.0" text="Filter by Contact" />
+   <ComboBox fx:id="filterCountry" layoutX="584.0" layoutY="292.0" prefWidth="150.0" />
+   <Label layoutX="584.0" layoutY="269.0" text="Filter by Country" />
+   <Button fx:id="returnButton" layoutX="641.0" layoutY="129.0" mnemonicParsing="false" onAction="#returnAction" text="Return">
+      <font>
+         <Font size="14.0" />
+      </font></Button>
+   <Button fx:id="appByCountry" layoutX="219.0" layoutY="462.0" mnemonicParsing="false" onAction="#appByCountryButton" text="Customer App By Country" />
+   <Button fx:id="appByContact" layoutX="25.0" layoutY="462.0" mnemonicParsing="false" onAction="#appByContactButton" text="Customer App By Contact" />
+   <Label layoutX="25.0" layoutY="278.0" text="Schedule for each contact">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <TableView fx:id="totalNumReportTable" layoutX="238.0" layoutY="74.0" prefHeight="178.0" prefWidth="300.0">
+     <columns>
+       <TableColumn fx:id="totalMonthReportCol" prefWidth="100.0" text="Month" />
+       <TableColumn fx:id="totalTypeReportCol" prefWidth="100.0" text="Type" />
+         <TableColumn fx:id="totalCountReportCol" prefWidth="100.0" text="Count" />
+     </columns>
+   </TableView>
+   <Label layoutX="38.0" layoutY="129.0" prefHeight="69.0" prefWidth="181.0" text="Total Number of Customer by Month and Type" textAlignment="CENTER" wrapText="true">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyAppointment">
+    <children>
+        <Label layoutX="47.0" layoutY="30.0" text="Modify Appointment">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="70.0" layoutY="100.0" text="Appointment ID" />
+        <Label layoutX="70.0" layoutY="140.0" text="Title" />
+        <Label layoutX="70.0" layoutY="180.0" text="Description" />
+        <Label layoutX="70.0" layoutY="220.0" text="Location" />
+        <Label layoutX="70.0" layoutY="260.0" text="Contact" />
+        <Label layoutX="70.0" layoutY="300.0" text="Type" />
+        <Label layoutX="70.0" layoutY="340.0" text="Start Date" />
+        <TextField fx:id="modifyAppID" disable="true" editable="false" layoutX="210.0" layoutY="95.0" />
+        <TextField fx:id="modifyAppTitle" layoutX="210.0" layoutY="135.0" />
+        <TextField fx:id="modifyAppDescription" layoutX="210.0" layoutY="175.0" />
+        <TextField fx:id="modifyAppLocation" layoutX="210.0" layoutY="215.0" />
+        <Button fx:id="modifyAppSave" layoutX="371.0" layoutY="518.0" mnemonicParsing="false" onAction="#modifyAppSaveAction" text="Save" />
+        <Button fx:id="modifyAppCancel" layoutX="454.0" layoutY="519.0" mnemonicParsing="false" onAction="#modifyAppCancelAction" text="Cancel" />
+        <Label layoutX="70.0" layoutY="380.0" text="Start Time" />
+        <Label layoutX="313.0" layoutY="380.0" text="End Time" />
+        <Label layoutX="70.0" layoutY="423.0" text="Customer ID" />
+        <Label layoutX="69.0" layoutY="463.0" text="User ID" />
+        <TextField fx:id="modifyAppType" layoutX="210.0" layoutY="295.0" />
+        <ComboBox fx:id="modifyAppContact" layoutX="210.0" layoutY="256.0" prefHeight="26.0" prefWidth="160.0" />
+        <DatePicker fx:id="modifyAppStartDate" layoutX="156.0" layoutY="336.0" prefHeight="26.0" prefWidth="126.0" />
+        <ComboBox fx:id="modifyAppStartTime" layoutX="156.0" layoutY="376.0" prefHeight="26.0" prefWidth="126.0" />
+        <ComboBox fx:id="modifyAppEndTime" layoutX="394.0" layoutY="376.0" prefHeight="26.0" prefWidth="126.0" />
+      <ComboBox fx:id="modifyAppCustomerID" layoutX="210.0" layoutY="419.0" prefWidth="150.0" />
+      <ComboBox fx:id="modifyAppUserID" layoutX="210.0" layoutY="459.0" prefWidth="150.0" />
+        <TextField fx:id="allPartSearch" layoutX="614.0" layoutY="13.0" onKeyPressed="#productOnKey" promptText="Search by Part ID or Name" />
+        <TableView fx:id="partTable" layoutX="423.0" layoutY="40.0" prefHeight="150.0" prefWidth="340.0">
+            <columns>
+                <TableColumn fx:id="partIdCol" minWidth="30.0" prefWidth="60.0" text="Product ID" />
+                <TableColumn fx:id="partNameCol" prefWidth="93.0" text="Product Name" />
+                <TableColumn fx:id="partInventoryCol" prefWidth="86.0" text="Inventory Level" />
+                <TableColumn fx:id="partPCCol" prefWidth="99.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="associatePartTable" layoutX="423.0" layoutY="220.0" prefHeight="150.0" prefWidth="340.0">
+            <columns>
+                <TableColumn fx:id="associatePartIdCol" minWidth="30.0" prefWidth="60.0" text="Product ID" />
+                <TableColumn fx:id="associatePartNameCol" prefWidth="93.0" text="Product Name" />
+                <TableColumn fx:id="associatePartInventoryCol" prefWidth="86.0" text="Inventory Level" />
+                <TableColumn fx:id="associatePartPCCol" prefWidth="99.0" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <Button fx:id="modProductAddButton" layoutX="724.0" layoutY="192.0" mnemonicParsing="false" onAction="#modProductAddAction" text="Add" />
+        <Button fx:id="modProductRemoveButton" layoutX="618.0" layoutY="375.0" mnemonicParsing="false" onAction="#modProductRemoveAction" text="Remove Associated Product" />
+    </children>
+</AnchorPane>

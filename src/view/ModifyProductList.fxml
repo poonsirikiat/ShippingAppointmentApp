@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ModifyProductList"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label layoutX="52.0" layoutY="44.0" text="Modify Product">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Label>
+    <Label layoutX="81.0" layoutY="103.0" text="ID" />
+    <TextField fx:id="modifyPartID" disable="true" editable="false" layoutX="203.0" layoutY="98.0" prefHeight="26.0" prefWidth="120.0" />
+    <Label layoutX="81.0" layoutY="140.0" text="Name" />
+    <TextField fx:id="modifyPartName" layoutX="203.0" layoutY="135.0" prefHeight="26.0" prefWidth="120.0" />
+    <Label layoutX="81.0" layoutY="177.0" text="Inv" />
+    <TextField fx:id="modifyPartInventory" layoutX="203.0" layoutY="173.0" prefHeight="26.0" prefWidth="120.0" />
+    <Label layoutX="81.0" layoutY="215.0" text="Price/Cost" />
+    <TextField fx:id="modifyPartPC" layoutX="203.0" layoutY="210.0" prefHeight="26.0" prefWidth="120.0" />
+    <Label layoutX="81.0" layoutY="253.0" text="Max" />
+    <TextField fx:id="modifyPartMax" layoutX="203.0" layoutY="248.0" prefHeight="26.0" prefWidth="120.0" />
+    <Label layoutX="358.0" layoutY="253.0" text="Min" />
+    <TextField fx:id="modifyPartMin" layoutX="402.0" layoutY="248.0" prefHeight="26.0" prefWidth="120.0" />
+    <Button fx:id="modifyPartSaveButton" layoutX="274.0" layoutY="354.0" mnemonicParsing="false" onAction="#modifyPartSaveAction" text="Save" />
+    <Button fx:id="modifyPartCancelButton" layoutX="338.0" layoutY="354.0" mnemonicParsing="false" onAction="#modifyPartCancelAction" text="Cancel" />
+
+</AnchorPane>

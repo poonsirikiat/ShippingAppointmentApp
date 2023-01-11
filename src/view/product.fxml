@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Product">
+    <Label layoutX="21.0" layoutY="15.0" text="Product lists">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <TableView fx:id="productTable" layoutX="32.0" layoutY="101.0" prefHeight="220.0" prefWidth="390.0">
+        <columns>
+            <TableColumn fx:id="productIdCol" minWidth="30.0" prefWidth="70.0" text="Product ID" />
+            <TableColumn fx:id="productNameCol" prefWidth="101.0" text="Product Name" />
+            <TableColumn fx:id="productInventoryCol" prefWidth="102.0" text="Inventory Level" />
+            <TableColumn fx:id="productPCCol" prefWidth="115.0" text="Price/Cost per Unit" />
+        </columns>
+    </TableView>
+    <TextField fx:id="productSearch" layoutX="284.0" layoutY="69.0" onKeyPressed="#productOnKey" promptText="Search by Product ID or Name">
+        <font>
+            <Font size="11.0" />
+        </font>
+    </TextField>
+    <Button fx:id="addProductId" layoutX="155.0" layoutY="335.0" mnemonicParsing="false" onAction="#addProductAction" text="Add">
+        <font>
+            <Font size="11.0" />
+        </font>
+    </Button>
+    <Button fx:id="updateProductId" layoutX="200.0" layoutY="335.0" mnemonicParsing="false" onAction="#updateProductAction" text="Modify">
+        <font>
+            <Font size="11.0" />
+        </font>
+    </Button>
+    <Button fx:id="deleteProductId" layoutX="255.0" layoutY="335.0" mnemonicParsing="false" onAction="#deleteProductAction" text="Delete">
+        <font>
+            <Font size="11.0" />
+        </font>
+    </Button>
+    <Button fx:id="backProductId" layoutX="310.0" layoutY="335.0" mnemonicParsing="false" onAction="#backProductAction" text="Back">
+        <font>
+            <Font size="11.0" />
+        </font>
+    </Button>
+
+</AnchorPane>
